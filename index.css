@@ -49,6 +49,7 @@ p {
 .btn {
     background-color: #10B981;
     color: white;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: bold;
     border: none;
