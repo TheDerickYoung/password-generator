@@ -1,24 +1,27 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
-let one = document.getElementById('one')
-let two = document.getElementById('two')
+let passwordOne = document.getElementById('passwordOne')
+let passwordTwo = document.getElementById('passwordTwo')
 
-function generatePasswords() {
-    let password = []
-    for (let i = 0; i < 16; i++) {
-        let randomNum = Math.floor(Math.random() * characters.length)
-        password.push(characters[randomNum])
-    }
-    return password.join('')
+let getRandomNum = function() {
+    return Math.floor(Math.random() * characters.length)
 }
 
-function handleClick() {
-    let passwordOne = generatePasswords()
-    let passwordTwo = generatePasswords()
+function generatePasswords(arr) {
+    for (let i = 0; i < 16; i++) {
+        arr.push(characters[getRandomNum()])
+    }
+    return arr.join('');
+}
 
-    one.textContent = passwordOne
-    two.textContent = passwordTwo
+
+function handleClick() {
+    let first = generatePasswords([])
+    let second = generatePasswords([])
+    
+    passwordOne.textContent = first
+    passwordTwo.textContent = second
 }
 
 async function copyContent(element) {
@@ -33,9 +36,9 @@ async function copyContent(element) {
 }
 
 function copyPasswordOne() {
-    copyContent(one);
+    copyContent(passwordOne);
 }
 
 function copyPasswordTwo() {
-    copyContent(two);
+    copyContent(passwordTwo);
 }
