@@ -9,7 +9,7 @@ let getRandomNum = function() {
 }
 
 function generatePasswords(arr) {
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 15; i++) {
         arr.push(characters[getRandomNum()])
     }
     return arr.join('');
