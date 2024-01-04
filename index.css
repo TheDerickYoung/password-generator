@@ -1,62 +1,58 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
     margin: 0;
-    background-color: rgb(33, 41, 54);
-    height: 100vh;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;*/
+    background-color: #1F2937;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    /*height: 700px;
-    width: 700px;
-    padding-left: 50px;*/
-    padding: 150px;
-    margin: auto;
+    padding: 120px 60px;
 }
 
-.title {
+h1 {
+    margin: 0;
     font-family: 'Karla', sans-serif;
     font-size: 60px;
     font-weight: 800;
-    line-height: 50px;
+    line-height: 50px;    
 }
 
 .white {
     color: white;
-    margin: 0;
 }
 
 .green {
     color: #4ADF86;
-    margin: 0;
 }
 
 p {
-    color: rgb(207, 206, 211);
-    margin-top: 15px;
-    font-size: 30px;
+    margin: 0px;
+    margin-top: 20px;
+    color: #D5D4D8;
+    font-size: 28px;
     font-family: 'Inter', sans-serif;
-    font-weight: regular;
-    line-height: 38px;
+    line-height: 28px;
 }
 
-.btn {
+#btn {
     background-color: #10B981;
     color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
     border: none;
     border-radius: 5px;
-    padding: 15px 20px;
-    cursor: pointer;
-    margin-top: 40px;
+    padding: 10px 15px;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .btn:hover {
@@ -64,25 +60,28 @@ p {
     background-color: #10B989;
 }
 
-.passwords {
-    display: flex;
-    justify-content: space-between;
+#passwords {
+    margin-top: 40px;
+    padding-top: 40px;
     border-top: 1px solid #2F3E53;
-    width: 90%;
-    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.passwordOne,
-.passwordTwo {
-    background-color: #273549;
-    color: #55F991;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-top: 30px;
+#passwordOne, 
+#passwordTwo {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: medium;
+    font-size: 16px;
+    background-color: #273549;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    border-radius: 5px;
+    color: #55F991;
+    line-height: 32px;
     text-align: center;
-    height: 30px;
-    width: 40%;
+    height: 50px;
+  align-items: center;
 }
